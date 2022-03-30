@@ -1,0 +1,18 @@
+name: Implement LazyIndexedStack
+type: flutter
+steps:
+  - name: Introduction
+    directory: introduction
+    has_solution: true
+  - name: Step 1
+    directory: step_01
+    has_solution: false
+  - name: Step 2
+    directory: step_02
+    has_solution: false
+  - name: Step 3
+    directory: step_03
+    has_solution: false
+  - name: Step 4
+    directory: step_04
+    has_solution: false
