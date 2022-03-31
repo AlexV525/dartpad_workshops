@@ -1,0 +1,15 @@
+name: demo_app
+description: The demo app for the lazy indexed stack.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: '>=2.12.0'
+  flutter: '>=2.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
