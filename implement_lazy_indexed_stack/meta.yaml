@@ -3,7 +3,7 @@ type: flutter
 steps:
   - name: Introduction
     directory: introduction
-    has_solution: true
+    has_solution: false
   - name: Step 1
     directory: step_01
     has_solution: false
