@@ -4,9 +4,9 @@ steps:
   - name: Introduction
     directory: introduction
     has_solution: false
-  - name: Step 1
+  - name: Construct a LazyIndexedStack
     directory: step_01
-    has_solution: false
+    has_solution: true
   - name: Step 2
     directory: step_02
     has_solution: false
