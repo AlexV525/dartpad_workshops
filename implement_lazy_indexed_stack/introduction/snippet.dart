@@ -41,10 +41,10 @@ class _DemoPageState extends State<DemoPage> {
               index: _index,
               children: List<Widget>.generate(
                 3,
-                    (int index) => Center(
+                (int index) => Center(
                   child: Text(
                     'Children index:\n'
-                        '${'$index' * (index + 1)}',
+                    '${'$index' * (index + 1)}',
                     style: Theme.of(context).textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),

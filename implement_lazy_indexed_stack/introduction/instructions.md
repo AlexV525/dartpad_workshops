@@ -14,8 +14,7 @@ to get started using Flutter.
 ## What is `IndexedStack`?
 
 <iframe
-  width="560"
-  height="315"
+  style="width: 97%; aspect-ratio: 16/9;"
   src="https://www.youtube.com/embed/_O0PPD1Xfbk"
   title="IndexedStack (Flutter Widget of the Week)"
   frameborder="0"
@@ -23,7 +22,8 @@ to get started using Flutter.
   allowfullscreen>
 </iframe>
 
-`IndexedStack` is a `Stack` that shows a single child from a list of children.
+`IndexedStack` is a `Stack` that
+shows a single child from a list of children.
 The displayed child is the one with the given _index_.
 The stack is always as big as the largest child.
 When the _index_ is null, then nothing is displayed.
@@ -41,8 +41,7 @@ A GIF should be presented here.
 
 ## What's next?
 
-Throughout this workshop, we'll build on this code.
-We’ll convert the `IndexedStack` to be a more
-efficient, lazy loading `LazyIndexedStack`.
+Throughout this workshop, we'll convert the `IndexedStack`
+to be a more efficient, lazy loading `LazyIndexedStack`.
 This allows us to add save performance cost at the first place.
 Move on to the next step to begin!
