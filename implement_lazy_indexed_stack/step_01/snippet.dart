@@ -14,9 +14,9 @@ void main() {
 Widget buildLazyIndexedStack(BuildContext context) {
   // TODO: Implement the LazyIndexedStack to make it valid.
   return LazyIndexedStack(
-    index: 0,
     alignment: Alignment.center,
     sizing: StackFit.expand,
+    index: 0,
     children: List<Widget>.generate(
       3,
       (int index) => Text(

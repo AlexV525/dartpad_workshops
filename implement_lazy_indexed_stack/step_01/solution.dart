@@ -30,18 +30,18 @@ Widget buildLazyIndexedStack(BuildContext context) {
 class LazyIndexedStack extends StatefulWidget {
   const LazyIndexedStack({
     Key? key,
-    required this.index,
-    required this.children,
     this.alignment = AlignmentDirectional.topStart,
     this.textDirection,
     this.sizing = StackFit.loose,
+    this.index = 0,
+    this.children = const <Widget>[],
   }) : super(key: key);
 
-  final int index;
-  final List<Widget> children;
   final AlignmentGeometry alignment;
   final TextDirection? textDirection;
   final StackFit sizing;
+  final int index;
+  final List<Widget> children;
 
   @override
   State<LazyIndexedStack> createState() => _LazyIndexedStackState();
@@ -51,11 +51,11 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
   @override
   Widget build(BuildContext context) {
     return IndexedStack(
-      index: widget.index,
-      children: widget.children,
       alignment: widget.alignment,
       textDirection: widget.textDirection,
       sizing: widget.sizing,
+      index: widget.index,
+      children: widget.children,
     );
   }
 }
