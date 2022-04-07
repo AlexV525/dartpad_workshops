@@ -25,7 +25,6 @@ to get started using Flutter.
 `IndexedStack` is a `Stack` that
 shows a single child from a list of children.
 The displayed child is the one with the given _index_.
-The stack is always as big as the largest child.
 When the _index_ is null, then nothing is displayed.
 
 ## When should I use `IndexedStack`?

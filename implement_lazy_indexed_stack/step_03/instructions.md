@@ -5,6 +5,7 @@ here we implement our own activate recording mechanism
 to record if a specified child of the stack has been activated.
 
 ## Build the child according to its activation state
+
 By holding the boolean flag list, you can build each child conditionally.
 e.g. `list[i] ? widget.children[i] : const SizedBox()`.
 
