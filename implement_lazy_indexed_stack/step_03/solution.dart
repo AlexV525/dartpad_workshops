@@ -52,8 +52,15 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
     (int i) => i == widget.index,
   );
 
-  // TODO: Implement the `_buildChildren` function to build children with their activated state.
-  List<Widget> _buildChildren(BuildContext context) {}
+  List<Widget> _buildChildren(BuildContext context) {
+    return <Widget>[
+      for (int i = 0; i < widget.children.length; i++)
+        if (_activatedList[i] == true)
+          widget.children[i]
+        else
+          const SizedBox.shrink(),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +69,7 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
       textDirection: widget.textDirection,
       sizing: widget.sizing,
       index: widget.index,
-      children: widget.children,
+      children: _buildChildren(context),
     );
   }
 }
