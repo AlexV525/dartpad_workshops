@@ -7,12 +7,18 @@ steps:
   - name: Construct a LazyIndexedStack
     directory: step_01
     has_solution: true
-  - name: Step 2
+  - name: Persist boolean flags for each child
     directory: step_02
-    has_solution: false
-  - name: Step 3
+    has_solution: true
+  - name: Build the child according to its activation state
     directory: step_03
-    has_solution: false
-  - name: Step 4
+    has_solution: true
+  - name: Activate the child when the new index match its position
     directory: step_04
+    has_solution: true
+  - name: Control children updates more precisely
+    directory: step_05
+    has_solution: false
+  - name: Completion
+    directory: completion
     has_solution: false
