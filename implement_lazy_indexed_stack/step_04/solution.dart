@@ -52,8 +52,14 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
     (int i) => i == widget.index,
   );
 
-  // TODO: Implement the `_activateIndex` function to build children with their activated state.
-  void _activateIndex(int? index) {}
+  void _activateIndex(int? index) {
+    if (index == null) {
+      return;
+    }
+    if (!_activatedList[index]) {
+      _activatedList[index] = true;
+    }
+  }
 
   List<Widget> _buildChildren(BuildContext context) {
     return <Widget>[
