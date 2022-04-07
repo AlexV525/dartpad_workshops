@@ -19,8 +19,8 @@ Child 2 ---> Child 2A // Updated with a new widget
 Child 3
 ```
 
-When the _Child 2_ updated to _Child 2A_, the corresponding slot of flags
-should be reset to `false` instead of remaining `true`.
+When the _Child 2_ updated to _Child 2A_, the corresponding slot
+of the boolean flag should be reset to `false` instead of remaining `true`.
 
 This is an open question and have no provided answers.
 Feel free to explore the idea yourself,
