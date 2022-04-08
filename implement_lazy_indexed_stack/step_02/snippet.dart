@@ -48,6 +48,7 @@ class LazyIndexedStack extends StatefulWidget {
 
 class _LazyIndexedStackState extends State<LazyIndexedStack> {
   // TODO: Implement the `_activatedList` to hold children's state.
+  // Hint: Try the List.generate constructor.
   late final List<bool> _activatedList;
 
   @override

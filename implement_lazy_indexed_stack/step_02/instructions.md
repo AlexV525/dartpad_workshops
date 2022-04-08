@@ -1,8 +1,9 @@
 # Mark activated states
 
-To maintain the _activated_ state for each child of the stack,
-here we implement our own activate recording mechanism
-to record if a specified child of the stack has been activated.
+Next, you'll need to keep track of which widgets have been viewed or
+_activated_. To maintain the _activated_ state for each child of the stack,
+implement your own mechanism to record if a specified child of the stack has
+been viewed.
 
 ## Persist boolean flags for each child
 

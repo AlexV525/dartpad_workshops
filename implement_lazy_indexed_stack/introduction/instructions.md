@@ -2,9 +2,9 @@
 
 Welcome to the introductory `LazyIndexedStack` workshop for Flutter! 👋
 
-In this workshop, you will learn how to use the `IndexedStack` in your code,
-and create a lazy-loading `LazyIndexedStack` to lazily build children
-only when they're first activated.
+In this workshop, you will learn how to use the `IndexedStack` in your code, and
+create a lazy-loading `LazyIndexedStack` that builds children on-demand only
+when they're first activated.
 
 This workshop is best for folks already familiar with building simple
 Flutter applications. If this is your first time using Flutter, then
@@ -29,18 +29,20 @@ When the _index_ is null, then nothing is displayed.
 
 ## When should I use `IndexedStack`?
 
-Considering you have multiple pages want to place in a same page
-and switch them by the bottom navigation,
-or you have a sequence of widgets that needs to display.
-`IndexedStack` perfectly suit for these cases.
+`IndexedStack` perfectly suit for the following use cases:
 
+  - If you have multiple pages and want to switch between them using bottom
+    navigation.
+  - When you have a sequence of widgets you need to display.
+
+<!-- Leftover? It's not a markdown comment and shows up in the tutorial -->
 {% comment %}
 A GIF should be presented here.
 {% endcomment %}
 
 ## What's next?
 
-Throughout this workshop, we'll convert the `IndexedStack`
-to be a more efficient, lazy loading `LazyIndexedStack`.
-This allows us to add save performance cost at the first place.
+Throughout this workshop, you'll convert the `IndexedStack`
+into a more efficient, lazy loading `LazyIndexedStack`.
+This allows you to save performance cost at the first place.
 Move on to the next step to begin!

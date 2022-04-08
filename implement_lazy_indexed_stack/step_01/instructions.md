@@ -1,11 +1,16 @@
 # Construct a `LazyIndexedStack`
 
-Let's start from a pass-through constructor,
-passing all arguments to the `IndexedStack`.
+Let's start by creating a `LazyIndexedStack` widget. The constructor should
+accept the same arguments as an `IndexedStack`, and pass those arguments to an
+`IndexedStack` widget inside the `build` method.
 
 ## Requirements
 
-A `IndexedStack` generally construct like the below:
+<!-- Could you discuss a bit more why the constructor should look like this? 
+What do these properties do and why are they important? This might help the 
+reader understand what they're doing and why they're doing it :) -->
+The `IndexedStack` constructor accepts the following arguments:
+
 ```dart
 IndexedStack({
   Key? key,
@@ -16,5 +21,7 @@ IndexedStack({
   List<Widget> children = const <Widget>[],
 });
 ```
+
+<!-- Why is this a block quote? -->
 
 > Here we prefer _composition_ over _inheritance_.

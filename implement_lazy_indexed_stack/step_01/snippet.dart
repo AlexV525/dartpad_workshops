@@ -11,8 +11,13 @@ void main() {
   );
 }
 
+// TODO: Create a LazyIndexedStack widget that forwards all arguments to an
+// IndexedStack widget.
+
+// Reviewers note: I felt like these instructions were a little unclear and
+// could use a little more prompting.
+
 Widget buildLazyIndexedStack(BuildContext context) {
-  // TODO: Implement the LazyIndexedStack to make it valid.
   return LazyIndexedStack(
     alignment: Alignment.center,
     sizing: StackFit.expand,
