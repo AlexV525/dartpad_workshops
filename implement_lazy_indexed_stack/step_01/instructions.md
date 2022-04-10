@@ -20,6 +20,7 @@ IndexedStack({
 });
 ```
 
-<!-- Why is this a block quote? -->
-
 > Here we prefer _composition_ over _inheritance_.
+
+To learn more details about arguments of the `IndexedStack`, see
+[the API document](https://api.flutter.dev/flutter/widgets/IndexedStack-class.html).
