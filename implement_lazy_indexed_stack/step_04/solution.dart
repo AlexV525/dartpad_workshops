@@ -52,12 +52,22 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
     (int i) => i == widget.index,
   );
 
+  @override
+  void didUpdateWidget(LazyIndexedStack oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.index != widget.index) {
+      _activateIndex(widget.index);
+    }
+  }
+
   void _activateIndex(int? index) {
     if (index == null) {
       return;
     }
     if (!_activatedList[index]) {
-      _activatedList[index] = true;
+      setState(() {
+        _activatedList[index] = true;
+      });
     }
   }
 
@@ -73,7 +83,6 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
 
   @override
   Widget build(BuildContext context) {
-    _activateIndex(widget.index);
     return IndexedStack(
       alignment: widget.alignment,
       textDirection: widget.textDirection,

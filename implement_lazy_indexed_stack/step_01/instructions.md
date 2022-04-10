@@ -1,14 +1,12 @@
-# Construct a `LazyIndexedStack`
+# Implement the `LazyIndexedStack`
 
-Let's start by creating a `LazyIndexedStack` widget. The constructor should
-accept the same arguments as an `IndexedStack`, and pass those arguments to an
-`IndexedStack` widget inside the `build` method.
+Let's start by creating a `LazyIndexedStack` widget.
+The constructor should accept the same arguments
+as an `IndexedStack`, and pass those arguments
+to an `IndexedStack` widget inside the `build` method.
 
 ## Requirements
 
-<!-- Could you discuss a bit more why the constructor should look like this? 
-What do these properties do and why are they important? This might help the 
-reader understand what they're doing and why they're doing it :) -->
 The `IndexedStack` constructor accepts the following arguments:
 
 ```dart

@@ -1,9 +1,3 @@
-# Mark activated states
-
-To maintain the _activated_ state for each child of the stack,
-here we implement our own activate recording mechanism
-to record if a specified child of the stack has been activated.
-
 ## Control children updates more precisely
 
 Although we've implemented all necessary steps for lazy-loading,

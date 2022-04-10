@@ -52,6 +52,14 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
     (int i) => i == widget.index,
   );
 
+  @override
+  void didUpdateWidget(LazyIndexedStack oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.index != widget.index) {
+      _activateIndex(widget.index);
+    }
+  }
+
   // TODO: Implement the `_activateIndex` function to build children with their activated state.
   void _activateIndex(int? index) {}
 
@@ -67,14 +75,6 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
 
   @override
   Widget build(BuildContext context) {
-    // Why is this being updated in the build method? This code should be in the
-    // `didUpdateWidget` method:
-    // https://api.flutter.dev/flutter/widgets/State/didUpdateWidget.html
-    //
-    // In fact, it might be a good idea to have a step covering didUpdateWidget,
-    // since the list of children could change as well -- what should happen in
-    // that case?
-    _activateIndex(widget.index);
     return IndexedStack(
       alignment: widget.alignment,
       textDirection: widget.textDirection,

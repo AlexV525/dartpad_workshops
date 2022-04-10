@@ -53,19 +53,6 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
   );
 
   List<Widget> _buildChildren(BuildContext context) {
-    // Use List.generate again? You get the index for free.
-    //
-    // return List.generate(
-    //   widget.children.length, 
-    //   (i) => _activatedList[i] ? widget.children[i] : const SizedBox.shrink(),
-    // );
-
-
-    // Is this actually lazy? The widget has already been created by this point.
-    //
-    // I thought a LazyIndexedStack would use a `builder` function to lazily
-    // build the correct widget for the specific index, similar to
-    // `ListView.builder`?
     return <Widget>[
       for (int i = 0; i < widget.children.length; i++)
         if (_activatedList[i] == true)
