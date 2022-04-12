@@ -1,15 +1,19 @@
 # Introduction
 
-Welcome to the introductory `LazyIndexedStack` workshop for Flutter! 👋
+Welcome to the Flutter workshop `LazyIndexedStack`
+written by [Alex Li](https://github.com/AlexV525) ! 💙
 
-In this workshop, you will learn how to use the `IndexedStack` in your code, and
-create a lazy-loading `LazyIndexedStack` that builds children on-demand only
-when they're first activated.
+In this workshop, you will learn how to use the `IndexedStack` in your code,
+and implement a lazy-loading `LazyIndexedStack` to lazily build children
+only when they are first activated.
 
-This workshop is best for folks already familiar with building simple
-Flutter applications. If this is your first time using Flutter, then
-check out **[Writing Your First Flutter App](https://flutter.dev/docs/get-started/codelab)**
-to get started using Flutter.
+> The _lazily build_ here is indicating
+> the processes of `Widget`s inflating `Element`s are lazy.
+
+This workshop is intended for people who are already
+familiar with building simple Flutter apps.
+Check out to get started with Flutter if this is your first time using it.
+**[Writing Your First Flutter App.](https://flutter.dev/docs/get-started/codelab)**
 
 ## What is `IndexedStack`?
 
@@ -31,14 +35,15 @@ When the _index_ is null, then nothing is displayed.
 
 `IndexedStack` perfectly suit for the following use cases:
 
-  - If you have multiple pages and want to switch between them using bottom
-    navigation.
-  - When you have a sequence of widgets you need to display.
+- If you have multiple pages and want to switch between them
+  using bottom navigation.
+  Typically, the case is when you have different pages together
+  in a single route, and only the selected one can be displayed.
+- When you have a sequence of widgets you need to display.
+  Consider the case that you have a counter but with the image version,
+  each increment will display a new image.
 
-<!-- Leftover? It's not a markdown comment and shows up in the tutorial -->
-{% comment %}
-A GIF should be presented here.
-{% endcomment %}
+<!-- A GIF should be presented here. -->
 
 ## What's next?
 
