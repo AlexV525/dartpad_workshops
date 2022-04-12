@@ -52,22 +52,31 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
     (int i) => i == widget.index,
   );
 
+  @override
+  void didUpdateWidget(LazyIndexedStack oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.index != widget.index) {
+      _activateIndex(widget.index);
+    }
+  }
+
   // TODO: Implement the `_activateIndex` function to build children with their activated state.
   void _activateIndex(int? index) {}
 
   List<Widget> _buildChildren(BuildContext context) {
-    return <Widget>[
-      for (int i = 0; i < widget.children.length; i++)
-        if (_activatedList[i] == true)
-          widget.children[i]
-        else
-          const SizedBox.shrink(),
-    ];
+    return List<Widget>.generate(
+      widget.children.length,
+      (int i) {
+        if (_activatedList[i]) {
+          return widget.children[i];
+        }
+        return const SizedBox.shrink();
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    _activateIndex(widget.index);
     return IndexedStack(
       alignment: widget.alignment,
       textDirection: widget.textDirection,

@@ -55,6 +55,10 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
   @override
   void didUpdateWidget(LazyIndexedStack oldWidget) {
     super.didUpdateWidget(oldWidget);
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.index != widget.index) {
+      _activateIndex(widget.index);
+    }
     // TODO: Implement a more precise control for children updates.
   }
 
@@ -63,23 +67,26 @@ class _LazyIndexedStackState extends State<LazyIndexedStack> {
       return;
     }
     if (!_activatedList[index]) {
-      _activatedList[index] = true;
+      setState(() {
+        _activatedList[index] = true;
+      });
     }
   }
 
   List<Widget> _buildChildren(BuildContext context) {
-    return <Widget>[
-      for (int i = 0; i < widget.children.length; i++)
-        if (_activatedList[i] == true)
-          widget.children[i]
-        else
-          const SizedBox.shrink(),
-    ];
+    return List<Widget>.generate(
+      widget.children.length,
+      (int i) {
+        if (_activatedList[i]) {
+          return widget.children[i];
+        }
+        return const SizedBox.shrink();
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    _activateIndex(widget.index);
     return IndexedStack(
       alignment: widget.alignment,
       textDirection: widget.textDirection,

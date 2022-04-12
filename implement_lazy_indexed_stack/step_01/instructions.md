@@ -1,11 +1,14 @@
-# Construct a `LazyIndexedStack`
+# Implement the `LazyIndexedStack`
 
-Let's start from a pass-through constructor,
-passing all arguments to the `IndexedStack`.
+Let's start by creating a `LazyIndexedStack` widget.
+The constructor should accept the same arguments
+as an `IndexedStack`, and pass those arguments
+to an `IndexedStack` widget inside the `build` method.
 
 ## Requirements
 
-A `IndexedStack` generally construct like the below:
+The `IndexedStack` constructor accepts the following arguments:
+
 ```dart
 IndexedStack({
   Key? key,
@@ -18,3 +21,6 @@ IndexedStack({
 ```
 
 > Here we prefer _composition_ over _inheritance_.
+
+To learn more details about arguments of the `IndexedStack`, see
+[the API document](https://api.flutter.dev/flutter/widgets/IndexedStack-class.html).

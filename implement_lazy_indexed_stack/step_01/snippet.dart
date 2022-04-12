@@ -11,8 +11,26 @@ void main() {
   );
 }
 
+// TODO: Implement the `LazyIndexedStack` that forwards all arguments to an `IndexedStack` widget.
+/// Using the [StatefulWidget] for further implementations.
+class LazyIndexedStack extends StatefulWidget {
+  const LazyIndexedStack({Key? key}) : super(key: key);
+
+  /// Add all arguments here.
+
+  @override
+  _LazyIndexedStackState createState() => _LazyIndexedStackState();
+}
+
+class _LazyIndexedStackState extends State<LazyIndexedStack> {
+  @override
+  Widget build(BuildContext context) {
+    // Pass all arguments to an `IndexedStack`.
+    return IndexedStack();
+  }
+}
+
 Widget buildLazyIndexedStack(BuildContext context) {
-  // TODO: Implement the LazyIndexedStack to make it valid.
   return LazyIndexedStack(
     alignment: Alignment.center,
     sizing: StackFit.expand,
