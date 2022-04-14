@@ -7,8 +7,7 @@ In this workshop, you will learn how to use the `IndexedStack` in your code,
 and implement a lazy-loading `LazyIndexedStack` to lazily build children
 only when they are first activated.
 
-> The _lazily build_ here is indicating
-> the processes of `Widget`s inflating `Element`s are lazy.
+> The _lazily build_ here indicates the processes of `Widget`s inflating `Element`s are lazy.
 
 This workshop is intended for people who are already
 familiar with building simple Flutter apps.
@@ -42,8 +41,6 @@ When the _index_ is null, then nothing is displayed.
 - When you have a sequence of widgets you need to display.
   Consider the case that you have a counter but with the image version,
   each increment will display a new image.
-
-<!-- A GIF should be presented here. -->
 
 ## What's next?
 
