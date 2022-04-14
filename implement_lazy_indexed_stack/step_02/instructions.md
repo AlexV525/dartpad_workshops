@@ -8,7 +8,7 @@ been viewed.
 ## Persist boolean flags for each child
 
 Since the `LazyIndexedStack` accepts a list of child,
-we can make a boolean flag list with the same length
+you can make a boolean flag list with the same length
 of the children to hold their activated states.
 
 Try to define a `List<bool>` here with `widget.children.length`,
