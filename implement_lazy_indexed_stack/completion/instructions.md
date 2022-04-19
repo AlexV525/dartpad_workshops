@@ -2,7 +2,7 @@
 
 Congratulations! 👍 You have reached the end of the workshop.
 
-In this workshop we
+In this workshop you
 
 - learned how to use and when to use the `IndexedStack`
 - implemented the `LazyIndexedStack` step by step

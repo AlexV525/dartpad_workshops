@@ -1,8 +1,8 @@
 ## Control children updates more precisely
 
-Although we've implemented all necessary steps for lazy-loading,
+Although you've implemented all necessary steps for lazy-loading,
 the current mechanism didn't support to reset the state of an updated child.
-we can still implement some more precise controls and updates for each child.
+You can still implement some more precise controls and updates for each child.
 
 Consider an update with children:
 

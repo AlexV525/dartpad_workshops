@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(DemoApp());
+  runApp(const DemoApp());
 }
 
 class DemoApp extends StatelessWidget {
+  const DemoApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Demo App',
-      home: DemoPage(),
-    );
+    return const MaterialApp(title: 'LazyIndexedStack', home: DemoPage());
   }
 }
 
@@ -41,14 +40,7 @@ class _DemoPageState extends State<DemoPage> {
               index: _index,
               children: List<Widget>.generate(
                 3,
-                (int index) => Center(
-                  child: Text(
-                    'Children index:\n'
-                    '${'$index' * (index + 1)}',
-                    style: Theme.of(context).textTheme.headlineLarge,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
+                (int index) => _SubIndexPage(index),
               ),
             ),
           ),
@@ -72,6 +64,53 @@ class _DemoPageState extends State<DemoPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _SubIndexPage extends StatefulWidget {
+  const _SubIndexPage(this.index, {Key? key}) : super(key: key);
+
+  final int index;
+
+  @override
+  State<_SubIndexPage> createState() => _SubIndexPageState();
+}
+
+class _SubIndexPageState extends State<_SubIndexPage> {
+  DateTime? _displayTime;
+
+  @override
+  void initState() {
+    super.initState();
+    Future<void>.delayed(const Duration(milliseconds: 300), () {
+      if (mounted) {
+        setState(() {
+          _displayTime = DateTime.now().subtract(
+            const Duration(milliseconds: 300),
+          );
+        });
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        const Spacer(),
+        Text(
+          'This is page ${widget.index}',
+          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                fontSize: 64,
+              ),
+          textAlign: TextAlign.center,
+        ),
+        if (_displayTime == null)
+          const Spacer()
+        else
+          Expanded(child: Text('initState() ran at $_displayTime')),
+      ],
     );
   }
 }

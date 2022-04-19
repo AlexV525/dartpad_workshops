@@ -20,7 +20,8 @@ IndexedStack({
 });
 ```
 
-> Here we prefer _composition_ over _inheritance_.
+> When making widgets, _compositions is preferred over inheritances_,
+> which will placed widgets in the `build()` method instead of using `extends`.
 
 To learn more details about arguments of the `IndexedStack`, see
 [the API document](https://api.flutter.dev/flutter/widgets/IndexedStack-class.html).
